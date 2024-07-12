@@ -9,7 +9,7 @@ data = PackedVector3Array(194.135, 438.809, 255.775, 200.138, 438.809, 255.775, 
 [node name="Node3D" type="Node3D"]
 
 [node name="Bedroom" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3385, -2.31683, -25.0917)
 mesh = ExtResource("1_x80ap")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Bedroom"]
@@ -18,7 +18,7 @@ mesh = ExtResource("1_x80ap")
 shape = SubResource("ConcavePolygonShape3D_21a4b")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_2vsib")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.7203, 297.433, 65.0958)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.9164, 304.418, 74.3839)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, -6.97574e-16, -1.5246e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, 0, 0, 0)
