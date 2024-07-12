@@ -20,7 +20,7 @@ var hand: Node3D
 var headlag= 1
 var crouch = 1
 @onready var pcap = $CollisionShape3D
-var default_height = 1
+var default_height = 2
 var crouch_move_speed = SPEED*0.4
 var crouch_speed = 20
 var crouch_height = default_height*0.3
