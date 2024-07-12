@@ -127,7 +127,7 @@ func attack():
 	var a = weapons[weaponIndex] as Weapon
 	var b = a.attack() as RigidBody3D
 	if b != null:
-		b.global_position = hand.global_position
+		#b.global_position = hand.global_position
 		b.global_rotation = hand.global_rotation
 		b.linear_velocity = CAMERA_CONTROLLER.global_basis*b.linear_velocity
 		#b.linear_velocity = CAMERA_CONTROLLER.global_basis*b.linear_velocity

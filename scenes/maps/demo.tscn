@@ -7,7 +7,7 @@
 [ext_resource type="Material" uid="uid://dhmq215fg6872" path="res://materials/sidewalk.tres" id="5_gpkgk"]
 [ext_resource type="Material" uid="uid://dchb8ptueisig" path="res://materials/road.tres" id="6_yj1dq"]
 [ext_resource type="PackedScene" uid="uid://dwqjg8ir1otcg" path="res://scenes/prefabs/entities/player.tscn" id="7_dpgq5"]
-[ext_resource type="Script" path="res://code/prefabs/destructable.gd" id="8_gh60q"]
+[ext_resource type="Script" path="res://code/destructable.gd" id="8_gh60q"]
 [ext_resource type="Texture2D" uid="uid://cm1h2b7r1tdy" path="res://images/texture/Vertical Siding 4_1024.png" id="9_0n4fo"]
 [ext_resource type="PackedScene" uid="uid://bo04i6uf62aeu" path="res://etc/Interact/Scenes/Button.tscn" id="10_j46v0"]
 [ext_resource type="PackedScene" uid="uid://deofr6q3l1ba3" path="res://etc/Interact/Scenes/door.tscn" id="11_obqqy"]

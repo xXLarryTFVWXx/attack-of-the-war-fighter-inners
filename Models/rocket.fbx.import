@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dwrs1nny1a3pc"
-path="res://.godot/imported/rocket.fbx-7b8b97cf8b5a58e23e1eb96544d1b185.scn"
+path="res://.godot/imported/rocket.fbx-8b9bb0fefcf7d2f7750a2a0437456edc.scn"
 
 [deps]
 
-source_file="res://models/rocket.fbx"
-dest_files=["res://.godot/imported/rocket.fbx-7b8b97cf8b5a58e23e1eb96544d1b185.scn"]
+source_file="res://Models/rocket.fbx"
+dest_files=["res://.godot/imported/rocket.fbx-8b9bb0fefcf7d2f7750a2a0437456edc.scn"]
 
 [params]
 

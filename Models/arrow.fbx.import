@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ck48683b2y8jh"
-path="res://.godot/imported/arrow.fbx-b074b1bc50cfc0c387fc7a4c013f2a11.scn"
+path="res://.godot/imported/arrow.fbx-62b4ef43122a5fbef0b7f81b95091326.scn"
 
 [deps]
 
-source_file="res://models/arrow.fbx"
-dest_files=["res://.godot/imported/arrow.fbx-b074b1bc50cfc0c387fc7a4c013f2a11.scn"]
+source_file="res://Models/arrow.fbx"
+dest_files=["res://.godot/imported/arrow.fbx-62b4ef43122a5fbef0b7f81b95091326.scn"]
 
 [params]
 

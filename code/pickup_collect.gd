@@ -7,7 +7,6 @@ class_name Collectable
 @export var restored_9mm=0
 @export var collision:Area3D
 @export var forced:bool
-
 func _on_area_3d_body_entered(body):
 	if (body.get_class() == "CharacterBody3D"):
 		var a = body as Player

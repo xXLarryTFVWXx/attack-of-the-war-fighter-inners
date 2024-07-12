@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ccd50ribyeo03"
-path="res://.godot/imported/bow.fbx-ffe27d61573ff591d3eb5db759deb6c5.scn"
+path="res://.godot/imported/bow.fbx-c81b9973803c5d79fb4ff9da4af63d58.scn"
 
 [deps]
 
-source_file="res://models/bow.fbx"
-dest_files=["res://.godot/imported/bow.fbx-ffe27d61573ff591d3eb5db759deb6c5.scn"]
+source_file="res://Models/bow.fbx"
+dest_files=["res://.godot/imported/bow.fbx-c81b9973803c5d79fb4ff9da4af63d58.scn"]
 
 [params]
 

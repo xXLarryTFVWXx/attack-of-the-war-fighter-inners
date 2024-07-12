@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://h51yuueewi7"
-path="res://.godot/imported/gun.fbx-3cc16687ad491fdb7d92d3e7326c99d2.scn"
+path="res://.godot/imported/gun.fbx-c69f0b633836127796ce7927070e1c1e.scn"
 
 [deps]
 
-source_file="res://models/gun.fbx"
-dest_files=["res://.godot/imported/gun.fbx-3cc16687ad491fdb7d92d3e7326c99d2.scn"]
+source_file="res://Models/gun.fbx"
+dest_files=["res://.godot/imported/gun.fbx-c69f0b633836127796ce7927070e1c1e.scn"]
 
 [params]
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://ce46if5fn1rb4"]
 
-[ext_resource type="Script" path="res://code/prefabs/arrow.gd" id="1_6agix"]
+[ext_resource type="Script" path="res://code/arrow.gd" id="1_hfqti"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_8wbn7"]
-size = Vector3(0.01, 0.0610156, 0.01)
+[sub_resource type="BoxShape3D" id="BoxShape3D_7gu4c"]
+size = Vector3(0.1, 0.1, 0.7)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obs5h"]
 resource_name = "Material"
@@ -71,15 +71,13 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_by463")
 
 [node name="RigidBody3D" type="RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1)
-inertia = Vector3(0, 0, 203.39)
-script = ExtResource("1_6agix")
+script = ExtResource("1_hfqti")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -4.16334e-16, -0.0105078, 0)
-shape = SubResource("BoxShape3D_8wbn7")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.15)
+shape = SubResource("BoxShape3D_7gu4c")
 
-[node name="Cube" type="MeshInstance3D" parent="CollisionShape3D"]
-transform = Transform3D(7.475, -3.26743e-07, 3.26743e-07, -3.26743e-07, -3.26743e-07, 7.475, -3.26743e-07, -7.475, -3.26743e-07, 0, 0.0105078, 0)
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, -4.37114e-07, -1.91069e-14, 0, -4.37114e-07, 10, -4.37114e-07, -10, -4.37114e-07, 0, 0, 0)
 mesh = SubResource("ArrayMesh_g2ex1")
 skeleton = NodePath("")

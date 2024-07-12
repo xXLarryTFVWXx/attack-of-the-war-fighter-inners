@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://p0eke03rv7b4"]
+
+[ext_resource type="PackedScene" uid="uid://ccwjy731ivkd2" path="res://scenes/prefabs/projectiles/rocket_jumpable.tscn" id="1_ci4ky"]
+
+[node name="RigidBody3D" instance=ExtResource("1_ci4ky")]

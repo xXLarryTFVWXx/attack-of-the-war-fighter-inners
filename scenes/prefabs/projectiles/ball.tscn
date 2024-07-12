@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bo34a0x3ver7v"]
 
-[ext_resource type="Script" path="res://code/prefabs/arrow.gd" id="1_dwv3v"]
+[ext_resource type="Script" path="res://code/arrow.gd" id="1_dwv3v"]
 [ext_resource type="Texture2D" uid="uid://7c201cy3pitt" path="res://images/hud/weapon.png" id="2_16i85"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8wbn7"]

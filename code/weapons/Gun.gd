@@ -7,6 +7,7 @@ class_name Gun
 @export var clipsize = 7
 @export var firesound : AudioStreamWAV
 @export var reloadDelay=1
+@export var force =20
 var reloadTimeRemaining =0
 @export var firingDelay = 0.5
 var firingTimeRemaining =0
@@ -37,6 +38,7 @@ func attack():
 func shoot():
 	firingTimeRemaining = firingDelay
 	var newbullet = bullet.instantiate() as RigidBody3D
-	newbullet.linear_velocity+=Vector3.FORWARD*10
+	newbullet.linear_velocity+=Vector3.FORWARD*force
 	get_tree().root.get_child(0).add_child(newbullet)
+	newbullet.global_position = $firepoint.global_position
 	return newbullet as RigidBody3D

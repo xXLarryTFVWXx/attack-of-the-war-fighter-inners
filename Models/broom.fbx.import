@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d18heii7t7vwd"
-path="res://.godot/imported/broom.fbx-25bae3505485ccfcee30ff4213f28daf.scn"
+path="res://.godot/imported/broom.fbx-434b42549a0ced6d6fac7cd05b84111a.scn"
 
 [deps]
 
-source_file="res://models/broom.fbx"
-dest_files=["res://.godot/imported/broom.fbx-25bae3505485ccfcee30ff4213f28daf.scn"]
+source_file="res://Models/broom.fbx"
+dest_files=["res://.godot/imported/broom.fbx-434b42549a0ced6d6fac7cd05b84111a.scn"]
 
 [params]
 
