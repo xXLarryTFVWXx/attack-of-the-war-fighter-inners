@@ -19,6 +19,11 @@ var HUD
 var hand: Node3D
 var headlag= 1
 var crouch = 1
+@onready var pcap = $CollisionShape3D
+var default_height = 2
+var crouch_move_speed = SPEED*0.4
+var crouch_speed = 20
+var crouch_height = default_height*0.3
 @export var maxhealth= 100
 @export var health = 100 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -98,6 +103,18 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	
+	# Handle crouch
+	# Right now modifies the height of the CollisionShape3D
+	if Input.is_action_pressed("crouch"):
+		pcap.shape.height -= crouch_speed * delta
+		SPEED = crouch_move_speed
+	else:
+		pcap.shape.height += crouch_speed * delta
+	if Input.is_action_just_released("crouch"):
+		SPEED = 5
+	pcap.shape.height = clamp(pcap.shape.height, crouch_height, default_height)
+
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("goleft", "goright", "goforward", "gobackward")
