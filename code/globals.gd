@@ -20,5 +20,9 @@ static var sound_ceramic_move:Array
 static var sound_ceramic_hit:Array
 static var sound_ceramic_smash:Array
 
+static var sound_player_jump:Array
+static var sound_player_walk:Array
 func _ready():
+	sound_player_walk.append("res://sfx/HOUS1062.WAV")
+
 	
