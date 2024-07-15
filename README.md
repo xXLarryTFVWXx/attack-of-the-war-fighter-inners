@@ -140,7 +140,7 @@ standard pistol type weapon with a clip that needs to be reloaded
 ![shovel](https://hackmd.io/_uploads/S16QJvVvR.png)
 # Interface Description
 Will figure out what works best in practice
-## Overall heirarchy
+## Menus
 The following are menus that can be entered and exited in a first in first out order.
 Need to draw hypothetical screenshots soon 
 ### Ingame pause menu buttons
@@ -155,7 +155,7 @@ Need to draw hypothetical screenshots soon
 * settings
 * stats
 * Loadout
-## Loadout Menu buttons
+### Loadout Menu buttons
 * Mainhand Weapon
 * Offhand weapon
 * Utility
@@ -164,5 +164,5 @@ Need to draw hypothetical screenshots soon
 * Backpack
 * Armor
 * Belt
-## Class selection buttons 
 ## Settings
+* TBD
