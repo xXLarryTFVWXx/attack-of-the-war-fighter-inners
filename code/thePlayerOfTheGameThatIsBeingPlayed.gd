@@ -156,13 +156,11 @@ func attack():
 func changeweapon(dir):
 	print("changing")
 	weapons[weaponIndex].visible = false
-	if(dir==1):
-		weaponIndex = (weaponIndex+1)%len(weapons)
-	if(dir==-1):
-		weaponIndex = (weaponIndex-1)%len(weapons)
+	if(dir!=1):
+		weaponIndex = (weaponIndex+dir)%len(weapons)
 	weapons[weaponIndex].visible = true
 	HUD.setIcon(weapons[weaponIndex].image)
-	
+	print("Weapon is now " + str(weaponIndex))
 func give_instance(weap):
 	var a = weap.instantiate()
 	weapons.push_front(a)
