@@ -165,4 +165,10 @@ Need to draw hypothetical screenshots soon
 * Armor
 * Belt
 ## Settings
-* TBD
+* Slider: General FOV: 70 to 110 with default being 90
+* Slider: Aimdown FOV: 50 to 110 with default being 90
+* Slider: Master Volume: 0 to 100 with default being 50
+* Slider: Voice Volume: 0 to 100 with default being 50
+* Slider: SFX Volume: 0 to 100 with default being 50
+* Dropdown: Graphics Quality - [Doodoo, Low, Medium, High, XTreme]
+* Button: Keybinds
