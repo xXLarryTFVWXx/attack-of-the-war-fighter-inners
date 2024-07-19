@@ -9,7 +9,10 @@ var pulling: bool = false
 @export var force = 20
 func _process(delta):
 	if pulling:
+		print("pulling back")
 		pull=clampf(pull+delta,0,2)
+		# somehow modify/warp the model to look like it's being pulled
+		
 		
 func attack():
 	pulling=true

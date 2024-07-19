@@ -77,7 +77,9 @@ func _update_camera(delta):
 func _ready():
 	hand = $Camera3D/hand
 	
+	give_instance(preload("res://scenes/prefabs/weapons/WP_Bow.tscn"))
 	give_instance(preload("res://scenes/prefabs/weapons/WP_Gun.tscn"))
+	set_equipped(0)
 	# Get mouse input
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	CAMERA_CONTROLLER = $Camera3D
@@ -156,7 +158,7 @@ func attack():
 func changeweapon(dir):
 	print("changing")
 	weapons[weaponIndex].visible = false
-	if(dir!=1):
+	if (dir != 0):
 		weaponIndex = (weaponIndex+dir)%len(weapons)
 	weapons[weaponIndex].visible = true
 	HUD.setIcon(weapons[weaponIndex].image)
@@ -167,6 +169,9 @@ func give_instance(weap):
 	hand.add_child(a)
 
 func set_equipped(weapo):
-	pass
+	# This is just to ensure that the weapon is always the first one added
+	if weapo > len(weapons):
+		weaponIndex = 0
+	weaponIndex = weapo
 func add_health(toadd):
 	health += toadd
