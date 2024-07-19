@@ -78,13 +78,14 @@ func _update_camera(delta):
 func _ready():
 	hand = $Camera3D/hand
 	
-	give_instance(preload("res://scenes/prefabs/weapons/WP_Bow.tscn"))
-	give_instance(preload("res://scenes/prefabs/weapons/WP_Gun.tscn"))
-	set_equipped(0)
 	# Get mouse input
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	CAMERA_CONTROLLER = $Camera3D
 	HUD = $Control
+	# Load the weapons after getting a reference to the controller
+	give_instance(preload("res://scenes/prefabs/weapons/WP_Bow.tscn"))
+	give_instance(preload("res://scenes/prefabs/weapons/WP_Gun.tscn"))
+	set_equipped(0)
 func ask_health(ct):
 	if maxhealth <= health:
 		print("health full")
