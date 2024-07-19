@@ -1,10 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://dwqjg8ir1otcg"]
+[gd_scene load_steps=35 format=3 uid="uid://dwqjg8ir1otcg"]
 
 [ext_resource type="Script" path="res://code/thePlayerOfTheGameThatIsBeingPlayed.gd" id="1_xbier"]
 [ext_resource type="Script" path="res://code/hud.gd" id="2_tqpvl"]
 [ext_resource type="PackedScene" uid="uid://b8ba1x8mt4xds" path="res://etc/Interact/interact_ray.tscn" id="2_yf8uk"]
 [ext_resource type="Texture2D" uid="uid://c0dwpc5oq6uxf" path="res://images/hud/hud.png" id="3_i0ifh"]
 [ext_resource type="Texture2D" uid="uid://dr0spm2ixta6w" path="res://images/hud/weapons/gun.png" id="5_ry05e"]
+[ext_resource type="Texture2D" uid="uid://bp8dawqq002xd" path="res://images/hud/Health1.png" id="6_awmws"]
+[ext_resource type="Texture2D" uid="uid://be55y0iqlww33" path="res://images/hud/Health3.png" id="6_yx76o"]
+[ext_resource type="Texture2D" uid="uid://qoxkpce07rc1" path="res://images/hud/Health2.png" id="7_f50gp"]
+[ext_resource type="Texture2D" uid="uid://ijrstmj508jp" path="res://images/hud/HealthContainer.png" id="7_wdenr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7n8ny"]
 
@@ -28,6 +32,146 @@ texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rxdm"]
+atlas = ExtResource("6_yx76o")
+region = Rect2(3, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taruv"]
+atlas = ExtResource("6_yx76o")
+region = Rect2(103, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pww7"]
+atlas = ExtResource("6_yx76o")
+region = Rect2(203, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg2o0"]
+atlas = ExtResource("6_yx76o")
+region = Rect2(303, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdrk0"]
+atlas = ExtResource("6_yx76o")
+region = Rect2(403, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrhwj"]
+atlas = ExtResource("7_f50gp")
+region = Rect2(2, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hc24n"]
+atlas = ExtResource("7_f50gp")
+region = Rect2(102, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26s8l"]
+atlas = ExtResource("7_f50gp")
+region = Rect2(202, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1328"]
+atlas = ExtResource("7_f50gp")
+region = Rect2(302, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7o6tm"]
+atlas = ExtResource("7_f50gp")
+region = Rect2(402, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3t72"]
+atlas = ExtResource("7_f50gp")
+region = Rect2(502, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v024c"]
+atlas = ExtResource("6_awmws")
+region = Rect2(2, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmy8e"]
+atlas = ExtResource("6_awmws")
+region = Rect2(102, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny48m"]
+atlas = ExtResource("6_awmws")
+region = Rect2(202, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrhsx"]
+atlas = ExtResource("6_awmws")
+region = Rect2(302, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_baltx"]
+atlas = ExtResource("6_awmws")
+region = Rect2(402, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtydr"]
+atlas = ExtResource("6_awmws")
+region = Rect2(502, 0, 97, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5yl2"]
+atlas = ExtResource("6_awmws")
+region = Rect2(602, 0, 97, 227)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x72qj"]
+animations = [{
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_4rxdm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_taruv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pww7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lg2o0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdrk0")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_mrhwj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hc24n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26s8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1328")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7o6tm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3t72")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_v024c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmy8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny48m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrhsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_baltx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtydr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5yl2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SystemFont" id="SystemFont_5s5d8"]
+font_names = PackedStringArray("American Typewriter")
+font_weight = 600
+hinting = 2
+msdf_size = 52
+
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_xbier")
 
@@ -48,29 +192,30 @@ shape = SubResource("CapsuleShape3D_7n8ny")
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_tqpvl")
+
+[node name="AmmoPanel" type="Panel" parent="HUD"]
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -189.0
-offset_top = -126.0
-offset_right = -51.0
-offset_bottom = -43.0
+offset_left = -179.0
+offset_top = -123.0
+offset_right = -41.0
+offset_bottom = -40.0
 grow_horizontal = 0
 grow_vertical = 0
-script = ExtResource("2_tqpvl")
-
-[node name="panel" type="Panel" parent="HUD"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_jl75g")
 
-[node name="Ammo" type="HBoxContainer" parent="HUD/panel"]
+[node name="Ammo" type="HBoxContainer" parent="HUD/AmmoPanel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -86,7 +231,7 @@ grow_vertical = 2
 theme_override_constants/separation = 5
 alignment = 1
 
-[node name="ClipAmmo" type="Label" parent="HUD/panel/Ammo"]
+[node name="ClipAmmo" type="Label" parent="HUD/AmmoPanel/Ammo"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.721569, 0.721569, 0.721569, 1)
@@ -94,7 +239,7 @@ theme_override_fonts/font = SubResource("SystemFont_6yqbr")
 theme_override_font_sizes/font_size = 42
 text = "30"
 
-[node name="TotalAmmo" type="Label" parent="HUD/panel/Ammo"]
+[node name="TotalAmmo" type="Label" parent="HUD/AmmoPanel/Ammo"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -103,22 +248,22 @@ theme_override_fonts/font = SubResource("SystemFont_anj2f")
 theme_override_font_sizes/font_size = 24
 text = "150"
 
-[node name="panel2" type="Panel" parent="HUD"]
+[node name="WeaponPanel" type="Panel" parent="HUD"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -268.0
-offset_top = -82.0
-offset_right = -157.0
-offset_bottom = -2.0
+offset_left = -309.0
+offset_top = -122.0
+offset_right = -198.0
+offset_bottom = -42.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_3lo7i")
 
-[node name="weapon" type="TextureRect" parent="HUD/panel2"]
+[node name="weapon" type="TextureRect" parent="HUD/WeaponPanel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -133,3 +278,53 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("5_ry05e")
+
+[node name="Panel" type="Panel" parent="HUD"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -673.0
+offset_top = -48.0
+offset_right = -633.0
+offset_bottom = -8.0
+grow_vertical = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HUD/Panel"]
+position = Vector2(778, -69.5)
+scale = Vector2(0.659794, 0.621145)
+sprite_frames = SubResource("SpriteFrames_x72qj")
+autoplay = "default"
+frame_progress = 0.215341
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 697.0
+offset_top = -181.0
+offset_right = 968.0
+offset_bottom = 83.0
+grow_vertical = 0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_wdenr")
+
+[node name="Label" type="Label" parent="HUD/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 711.0
+offset_top = -52.0
+offset_right = 806.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.25098, 0.25098, 0.25098, 1)
+theme_override_colors/font_shadow_color = Color(0.741176, 0.741176, 0.741176, 1)
+theme_override_fonts/font = SubResource("SystemFont_5s5d8")
+theme_override_font_sizes/font_size = 52
+text = "100"
