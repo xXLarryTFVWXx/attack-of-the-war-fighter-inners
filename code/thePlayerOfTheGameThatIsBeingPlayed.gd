@@ -6,6 +6,7 @@ class_name Player
 @export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
 @export var CAMERA_CONTROLLER : Camera3D
+var selectedWeapon : Weapon
 var playerClass : CasteSystem
 var _mouse_input : bool = false
 var _rotation_input : float
@@ -160,18 +161,28 @@ func changeweapon(dir):
 	weapons[weaponIndex].visible = false
 	if (dir != 0):
 		weaponIndex = (weaponIndex+dir)%len(weapons)
-	weapons[weaponIndex].visible = true
-	HUD.setIcon(weapons[weaponIndex].image)
+	selectedWeapon = weapons[weaponIndex]
+	selectedWeapon.visible = true
+	HUD.setIcon(selectedWeapon.image)
 	print("Weapon is now " + str(weaponIndex))
+
 func give_instance(weap):
 	var a = weap.instantiate()
+	a.visible = false
 	weapons.push_front(a)
-	hand.add_child(a)
 
-func set_equipped(weapo):
-	# This is just to ensure that the weapon is always the first one added
-	if weapo > len(weapons):
+func set_equipped(weaponIDX=-1):
+	if weaponIDX == -1:
 		weaponIndex = 0
-	weaponIndex = weapo
+	if is_instance_of(selectedWeapon, Weapon):
+		selectedWeapon.visible = false
+		hand.remove_child(selectedWeapon)
+	weaponIndex = weaponIDX
+	selectedWeapon = weapons[weaponIndex]
+	selectedWeapon.visible = true
+	hand.add_child(selectedWeapon)
+	
+	HUD.setIcon(selectedWeapon.image)
+	
 func add_health(toadd):
 	health += toadd
