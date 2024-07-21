@@ -1,8 +1,8 @@
 extends Control
 var ammo:Label
 var weap:TextureRect
-var ammoCount =0 
-var ammoTop= 0 
+var ammoCount = 0 
+var ammoTop = 0 
 func _ready():
 	ammo = $mainBox/Label as Label
 	weap = $mainBox/weaponBox/weapon as TextureRect

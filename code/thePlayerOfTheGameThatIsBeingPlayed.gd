@@ -162,16 +162,19 @@ func changeweapon(dir):
 	weapons[weaponIndex].visible = false
 	if (dir != 0):
 		weaponIndex = (weaponIndex+dir)%len(weapons)
+	hand.remove_child(selectedWeapon)
 	selectedWeapon = weapons[weaponIndex]
 	selectedWeapon.visible = true
 	HUD.setIcon(selectedWeapon.image)
-	print("Weapon is now " + str(weaponIndex))
+	hand.add_child(selectedWeapon)
+	print("Weapon is now ", weaponIndex)
 
 func give_instance(weap):
 	var a = weap.instantiate()
 	a.visible = false
 	weapons.push_front(a)
 
+# for right now, only use this for setting the initial weapon.
 func set_equipped(weaponIDX=-1):
 	if weaponIDX == -1:
 		weaponIndex = 0
@@ -182,6 +185,7 @@ func set_equipped(weaponIDX=-1):
 	selectedWeapon = weapons[weaponIndex]
 	selectedWeapon.visible = true
 	hand.add_child(selectedWeapon)
+	print("showing weapon", weaponIndex)
 	
 	HUD.setIcon(selectedWeapon.image)
 	

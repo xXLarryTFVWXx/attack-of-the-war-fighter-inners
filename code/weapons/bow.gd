@@ -1,7 +1,8 @@
 extends Weapon
 class_name Bow
-var pull: float = 0.0
-var pulling: bool = false
+@onready var pull: float = 0.0
+@onready var pulling: bool = false
+var displayName = "Bow"
 @export var arrow:PackedScene
 @export var ammo = 10
 @export var maxammo = 10
