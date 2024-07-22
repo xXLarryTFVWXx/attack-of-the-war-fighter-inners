@@ -11,12 +11,14 @@ func updateSlot():
 	
 func setMaxAmmo(count):
 	ammoTop = count
-	ammo.text = str(ammoCount)+"/"+str(ammoTop)
+	total_ammo.text = ammoTop
+	
 func setAmmo(count):
 	ammoCount = count
-	ammo.text = str(ammoCount)+"/"+str(ammoTop)
+	clip_ammo.text = str(ammoCount)
+	
 func ammoBlink():
 	pass
-func setIcon(icon):
-	var a = $mainBox/weaponBox/weapon as TextureRect
-	a.texture = icon
+	
+func setWeaponIcon(icon):
+	weapon.texture = icon

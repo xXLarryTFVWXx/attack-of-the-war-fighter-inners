@@ -55,6 +55,7 @@ and you get a scissor to stab people
 | -------- | -------- |
 | Max Health     | 150     |
 | Speed     | 1.1     |
+
 ### weapons
 | mainarm                                                        | sidearm                                                                                           | utility                                      |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -159,11 +160,8 @@ Need to draw hypothetical screenshots soon
 * Mainhand Weapon
 * Offhand weapon
 * Utility
-* Utility 2
-* Helmet
-* Backpack
 * Armor
-* Belt
+* cosmetic hat
 ## Settings
 * Slider: General FOV: 70 to 110 with default being 90
 * Slider: Aimdown FOV: 50 to 110 with default being 90
