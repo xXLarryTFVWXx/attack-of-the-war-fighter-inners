@@ -72,7 +72,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ga5ay")
 
-[node name="RigidBody3D" type="RigidBody3D"]
+[node name="RigidBody3D2" type="RigidBody3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 max_contacts_reported = 2
 contact_monitor = true

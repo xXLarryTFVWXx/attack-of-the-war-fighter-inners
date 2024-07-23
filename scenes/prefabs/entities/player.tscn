@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://b8ba1x8mt4xds" path="res://etc/Interact/interact_ray.tscn" id="2_yf8uk"]
 [ext_resource type="Texture2D" uid="uid://c0dwpc5oq6uxf" path="res://images/hud/hud.png" id="3_i0ifh"]
 [ext_resource type="Texture2D" uid="uid://dr0spm2ixta6w" path="res://images/hud/weapons/gun.png" id="5_ry05e"]
-[ext_resource type="Texture2D" uid="uid://bp8dawqq002xd" path="res://images/hud/Health1.png" id="6_awmws"]
-[ext_resource type="Texture2D" uid="uid://be55y0iqlww33" path="res://images/hud/Health3.png" id="6_yx76o"]
-[ext_resource type="Texture2D" uid="uid://qoxkpce07rc1" path="res://images/hud/Health2.png" id="7_f50gp"]
-[ext_resource type="Texture2D" uid="uid://ijrstmj508jp" path="res://images/hud/HealthContainer.png" id="7_wdenr"]
+[ext_resource type="Texture2D" uid="uid://bnauhh45ewk4v" path="res://images/hud/Health1.png" id="6_awmws"]
+[ext_resource type="Texture2D" uid="uid://b1t17226wu52u" path="res://images/hud/Health3.png" id="6_yx76o"]
+[ext_resource type="Texture2D" uid="uid://55aukoigb4fy" path="res://images/hud/Health2.png" id="7_f50gp"]
+[ext_resource type="Texture2D" uid="uid://bag2eqwhawhr7" path="res://images/hud/HealthContainer.png" id="7_wdenr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7n8ny"]
 
