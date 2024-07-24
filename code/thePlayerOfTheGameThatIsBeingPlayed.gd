@@ -6,7 +6,16 @@ class_name Player
 @export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
 @export var CAMERA_CONTROLLER : Camera3D
+
 var selectedWeapon : Weapon
+
+@export var maxhealth= 100
+@export var health = 100
+
+@onready var pcap = $CollisionShape3D
+@onready var HUD = $HUD
+
+
 var playerClass : CasteSystem
 var _mouse_input : bool = false
 var _rotation_input : float
@@ -16,17 +25,14 @@ var _player_rotation : Vector3
 var _camera_rotation : Vector3
 var weapons : Array
 var weaponIndex = 0
-var HUD
 var hand: Node3D
 var headlag= 1
 var crouch = 1
-@onready var pcap = $CollisionShape3D
 var default_height = 2
 var crouch_move_speed = SPEED*0.4
 var crouch_speed = 20
 var crouch_height = default_height*0.3
-@export var maxhealth= 100
-@export var health = 100 
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -81,11 +87,12 @@ func _ready():
 	# Get mouse input
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	CAMERA_CONTROLLER = $Camera3D
-	HUD = $Control
+	HUD = $HUD
 	# Load the weapons after getting a reference to the controller
 	give_instance(preload("res://scenes/prefabs/weapons/WP_Bow.tscn"))
 	give_instance(preload("res://scenes/prefabs/weapons/WP_Gun.tscn"))
 	set_equipped(0)
+
 func ask_health(ct):
 	if maxhealth <= health:
 		print("health full")
@@ -153,8 +160,9 @@ func attack():
 		b.linear_velocity = CAMERA_CONTROLLER.global_basis*b.linear_velocity
 		#b.linear_velocity = CAMERA_CONTROLLER.global_basis*b.linear_velocity
 		print("hi")
-	#HUD.setMaxAmmo(a.maxammo)
-	#HUD.setAmmo(a.ammo)
+	HUD.setMaxAmmo(a.ammo)
+	HUD.setAmmo(a.clip)
+	#HUD.setClip(a.clip)
 	pass
 	#hi.global_position = global_position
 func changeweapon(dir):
@@ -165,7 +173,7 @@ func changeweapon(dir):
 	hand.remove_child(selectedWeapon)
 	selectedWeapon = weapons[weaponIndex]
 	selectedWeapon.visible = true
-	HUD.setIcon(selectedWeapon.image)
+	#HUD.setIcon(selectedWeapon.image)
 	hand.add_child(selectedWeapon)
 	print("Weapon is now ", weaponIndex)
 
@@ -187,7 +195,7 @@ func set_equipped(weaponIDX=-1):
 	hand.add_child(selectedWeapon)
 	print("showing weapon", weaponIndex)
 	
-	HUD.setIcon(selectedWeapon.image)
+	#HUD.setIcon(selectedWeapon.image)
 	
 func add_health(toadd):
 	health += toadd

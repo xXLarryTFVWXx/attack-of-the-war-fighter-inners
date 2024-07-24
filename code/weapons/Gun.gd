@@ -5,6 +5,7 @@ class_name Gun
 @export var maxammo = 40
 @export var bullet:PackedScene
 @export var clipsize = 7
+@export var clip = 7
 @export var firesound : AudioStreamWAV
 @export var reloadDelay=1
 @export var force =20
@@ -21,7 +22,11 @@ func _process(delta):
 		firingTimeRemaining -= delta
 
 func reload():
-	if ammo != maxammo:
+	#incoming error i just needed to fix this before this class ends
+	if ammo != clipsize:
+		var a = clipsize - clip
+		clip += a
+		ammo -= a
 		reloadTimeRemaining = reloadDelay
 func _ready():
 	pass
@@ -31,11 +36,12 @@ func stopAimDown():
 	pass
 func attack():
 
-	if (reloadTimeRemaining <= 0 && firingTimeRemaining <= 0):
+	if (reloadTimeRemaining <= 0 && firingTimeRemaining <= 0 && clip>0):
 		print("shooting")
 		return shoot()
 
 func shoot():
+	clip -=1
 	firingTimeRemaining = firingDelay
 	var newbullet = bullet.instantiate() as RigidBody3D
 	newbullet.linear_velocity+=Vector3.FORWARD*force
